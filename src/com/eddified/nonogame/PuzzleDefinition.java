@@ -16,13 +16,29 @@ public class PuzzleDefinition {
 		//System.out.println(col_clues[0].length);
 	}
 	
+	public int[] getCluesForRow(int row) {
+		
+		return null;
+	}
 	
-
-	public int getRows() {
+	public int[] getCluesForCol(int col) {
+		
+		return null;
+	}
+	
+	public int[][] getCluesForRows() {
+		return row_clues;
+	}
+	
+	public int[][] getCluesForCols() {
+		return col_clues;
+	}
+	
+	public int getNumRows() {
 		return rows;
 	}
 
-	public int getCols() {
+	public int getNumCols() {
 		return cols;
 	}
 }

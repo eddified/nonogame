@@ -1,32 +1,23 @@
 package com.eddified.nonogame;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-
 import javax.swing.JPanel;
 
 public class Board extends JPanel {
 
 	private static final long serialVersionUID = 1L;
-	private static final int DEFAULT_SIZE = 900;
+	private final int NUM_BOARD_SQUARES_ON_ONE_SIDE = 15;
 
 	public Board() {
 		super();
-		setPreferredSize(new Dimension(DEFAULT_SIZE, DEFAULT_SIZE));
+		//setBackground(Color.LIGHT_GRAY);
+		GridController gc = new GridController(NUM_BOARD_SQUARES_ON_ONE_SIDE, NUM_BOARD_SQUARES_ON_ONE_SIDE);
+		this.add(gc.getView());
+		
 		setFocusable(true);
-		setBackground(Color.WHITE);
 		setDoubleBuffered(true);
 		
-		PuzzleDefinition pi = new PuzzleDefinition(4, 4);
-	}
-	
-	@Override
-	public void paintComponent(Graphics g) {
-		super.paintComponent(g);
+//		this.add(new MenuItem("Mode"));
 		
-		Graphics2D g2d = (Graphics2D) g;
-
+		//PuzzleDefinition pi = new PuzzleDefinition(4, 4);
 	}
 }
