@@ -10,14 +10,15 @@ public class Nonogame extends JFrame {
 	
 	public Nonogame() {
 		super();
-		
-		add(new Board());
+		Board board = new Board();
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		pack();
 		setLocationByPlatform(true);
 		//setLocationRelativeTo(null);
 		setTitle("Nonogram");
+		setJMenuBar(board.getJMenuBar());
+		add(board);
+		pack();
 		setResizable(false);
 		setVisible(true);
 		
